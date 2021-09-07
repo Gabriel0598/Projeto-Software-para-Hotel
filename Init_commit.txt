@@ -1,1 +1,13 @@
 Inicializando repositório git vazio - Projeto geral
+
+Áreas do projeto:
+
+Site
+Front - end: HTML/ CSS/ JavaScript;
+Back - end: PHP/ Laravel;
+
+App Mobile Android
+- Java;
+
+ERP - Desktop
+- C#;
