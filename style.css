@@ -1,0 +1,33 @@
+#oferecemos li .restaurante {background:url(http://hamptonparkhotel.com.br/imagem/restaurante.png)center sem repeat;}
+
+#oferecemos li .restaurante {background:url(http://hamptonparkhotel.com.br/imagem/restaurante.png)center sem repeat;}
+
+#oferecemos li .restaurante {background:url(http://hamptonparkhotel.com.br/imagem/restaurante.png)center sem repeat;}
+
+#oferecemos li .restaurante {background:url(http://hamptonparkhotel.com.br/imagem/restaurante.png)center sem repeat;}
+
+#oferecemos li .restaurante {background:url(http://hamptonparkhotel.com.br/imagem/restaurante.png)center sem repeat;}
+
+#oferecemos li .restaurante {background:url(http://hamptonparkhotel.com.br/imagem/restaurante.png)center sem repeat;}
+
+#oferecemos li .restaurante {background:url(http://hamptonparkhotel.com.br/imagem/restaurante.png)center sem repeat;}
+
+#oferecemos li .restaurante {background:url(http://hamptonparkhotel.com.br/imagem/restaurante.png)center sem repeat;}
+
+#oferecemos li .restaurante {background:url(http://hamptonparkhotel.com.br/imagem/restaurante.png)center sem repeat;}
+
+#oferecemos li .restaurante {background:url(http://hamptonparkhotel.com.br/imagem/restaurante.png)center sem repeat;}
+
+
+
+header:not(.reduce-header) li#c_[URI_DA_CATEGORIA] > a:before {
+  content: " ";
+  background-image: url([]);
+  background-repeat: no-repeat;
+  display: block;
+  margin: 0 auto 5px auto;
+  background-size: 100% 100%;
+  width: 40px;
+  height: 40px
+}
+
