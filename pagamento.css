@@ -1,0 +1,176 @@
+body{
+    background-image: url(https://i.pinimg.com/originals/7e/de/19/7ede19dcad79685ef8271989d62932b0.jpg);
+}
+
+
+.box{
+    color: white;
+    position: absolute;
+   left: 50%;
+   top: 50%;
+    transform: translate(-50%,-50%);
+    background-color: navy;
+    padding: 10px;
+    border-radius: 10px;
+    width: 60%;
+}
+
+
+fieldset{
+    border: 3px solid rgb(243, 243, 243);
+}
+legend{
+    border: 1px solid dodgerblue;
+    padding: 15px;
+    text-align: center;
+    background-color: dodgerblue;
+    border-radius: 8px;
+}
+.inputBox{
+    position: relative;
+}
+.inputUser{
+    background: none;
+    border: none;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    outline: none;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    width: 100%;
+    letter-spacing: 2px;
+}
+.labelInput{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    pointer-events: none;
+    transition: .5s;
+}
+.inputUser:focus ~ .labelInput,
+.inputUser:valid ~ .labelInput{
+    top: -20px;
+    font-size: 12px;
+    color: dodgerblue;
+}
+#data_nascimento{
+    border: none;
+    padding: 8px;
+    border-radius: 10px;
+    outline: none;
+    font-size: 15px;
+}
+#submit{
+    background-image: linear-gradient(to right,rgb(255, 103, 1), rgb(90, 20, 220));
+    width: 100%;
+    border: none;
+    padding: 15px;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 10px;
+    text-decoration: none;
+}
+#submit:hover{
+    background-image: linear-gradient(to right,rgb(255, 255, 255), rgb(80, 19, 195));
+}
+
+.link{
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+.payment-info {
+    background: blue;
+    padding: 10px;
+    border-radius: 6px;
+    color: #fff;
+    font-weight: bold
+}
+
+.product-details {
+    padding: 10px
+}
+
+
+
+.p-about {
+    font-size: 12px
+}
+
+.table-shadow {
+    -webkit-box-shadow: 5px 5px 15px -2px rgba(0, 0, 0, 0.42);
+    box-shadow: 5px 5px 15px -2px rgba(0, 0, 0, 0.42)
+}
+
+.type {
+    font-weight: 400;
+    font-size: 10px
+}
+
+label.radio {
+    cursor: pointer
+}
+
+label.radio input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    pointer-events: none
+}
+
+label.radio span {
+    padding: 1px 12px;
+    border: 2px solid #ada9a9;
+    display: inline-block;
+    color: #8f37aa;
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 300
+}
+
+label.radio input:checked+span {
+    border-color: #fff;
+    background-color: blue;
+    color: #fff
+}
+
+.credit-inputs {
+    background: rgb(102, 102, 221);
+    color: #fff !important;
+    border-color: rgb(102, 102, 221)
+}
+
+.credit-inputs::placeholder {
+    color: #fff;
+    font-size: 13px
+}
+
+.credit-card-label {
+    font-size: 9px;
+    font-weight: 300
+}
+
+.form-control.credit-inputs:focus {
+    background: rgb(102, 102, 221);
+    border: rgb(102, 102, 221)
+}
+
+.line {
+    border-bottom: 1px solid rgb(102, 102, 221)
+}
+
+.information span {
+    font-size: 12px;
+    font-weight: 500
+}
+
+.information {
+    margin-bottom: 5px
+}
