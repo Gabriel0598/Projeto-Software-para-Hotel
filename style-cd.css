@@ -1,0 +1,86 @@
+body{
+    background-image: url(https://i.pinimg.com/originals/7e/de/19/7ede19dcad79685ef8271989d62932b0.jpg);
+}
+
+
+.box{
+    color: white;
+    position: absolute;
+   left: 50%;
+   top: 50%;
+    transform: translate(-50%,-50%);
+    background-color: navy;
+    padding: 10px;
+    border-radius: 10px;
+    width: 60%;
+}
+
+
+fieldset{
+    border: 3px solid rgb(243, 243, 243);
+}
+legend{
+    border: 1px solid dodgerblue;
+    padding: 15px;
+    text-align: center;
+    background-color: dodgerblue;
+    border-radius: 8px;
+}
+.inputBox{
+    position: relative;
+}
+.inputUser{
+    background: none;
+    border: none;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    outline: none;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    width: 100%;
+    letter-spacing: 2px;
+}
+.labelInput{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    pointer-events: none;
+    transition: .5s;
+}
+.inputUser:focus ~ .labelInput,
+.inputUser:valid ~ .labelInput{
+    top: -20px;
+    font-size: 12px;
+    color: dodgerblue;
+}
+#data_nascimento{
+    border: none;
+    padding: 8px;
+    border-radius: 10px;
+    outline: none;
+    font-size: 15px;
+}
+#submit{
+    background-image: linear-gradient(to right,rgb(255, 103, 1), rgb(90, 20, 220));
+    width: 100%;
+    border: none;
+    padding: 15px;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 10px;
+    text-decoration: none;
+}
+#submit:hover{
+    background-image: linear-gradient(to right,rgb(255, 255, 255), rgb(80, 19, 195));
+}
+
+.link{
+    text-decoration: none;
+}
+
+
+
+
+
+
+
