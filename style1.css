@@ -2,6 +2,7 @@
 @import url(style.css) (min-width:200px);
 
 
+
 #feio{
 font-family: Arial,sans-serif;
 font-size: 20px;
@@ -256,3 +257,25 @@ background-image: url(https://i.pinimg.com/originals/7e/de/19/7ede19dcad79685ef8
       transform: translateX(-20px);
     }
   }
+
+  #imgpos {
+		
+  position: absolute;
+  margin-top: auto;
+  margin-bottom: 80%;
+  padding: 18px 6% 60px 6%;
+  margin-left: 40%;
+  margin-right: 80%;
+
+
+
+ width: auto;
+ 
+
+
+
+}
+  
+		
+
+   
