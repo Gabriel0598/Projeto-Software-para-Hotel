@@ -45,7 +45,7 @@ SELECT * FROM Clientes;
 --https://www.4devs.com.br/gerador_de_pessoas
 INSERT INTO dbo.Clientes(Nome_Completo, CPF, RG, Data_Nascimento, Genero, DDI_Tel_Fixo, DDD_Tel_Fixo,
 Num_Tel_Fixo, DDD_Tel_Celular, DDI_Tel_Celular,Num_Tel_Celular, Email_Principal, Logradouro, Numero,
-Bairro_Regiao, Cidade, Estado_Provincia, CEP, Pais)
+Bairro_Regiao, Cidade, Estado_Provincia, CEP_ZipCode, Pais)
 VALUES
 ('Clara Beatriz Moraes', 09896601097, 369615402, '13/06/1993', 'Feminino', 55, 91, 36198064,
 55, 91, 991371786, 'clarabeatrizmoraes__clarabeatrizmoraes@zf-lenksysteme.com',
