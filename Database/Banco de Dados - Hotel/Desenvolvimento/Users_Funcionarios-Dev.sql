@@ -17,3 +17,52 @@ INSERT INTO Users_Funcionarios(UserName, Senha, Matricula)
 VALUES('TESTE12', 'senha1234', 'F3150R5');
 
 SELECT * FROM Users_Funcionarios;
+
+--//////////////
+
+--Com criptografia:
+
+BEGIN TRANSACTION
+
+--Convertendo tipo para alocar espaço para a Hash:
+ALTER TABLE [dbo].[Users_Funcionarios] ALTER COLUMN Senha VARCHAR(64) NOT NULL;
+--///////////////////
+
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+--Criação de trigger para efetivar criptografia:
+CREATE TRIGGER TGR_Users_Funcionarios
+ON [dbo].[Users_Funcionarios]
+FOR INSERT
+AS
+BEGIN
+	DECLARE
+	@criptoSenha AS VARCHAR(MAX),
+	@id AS INT
+
+	SELECT @criptoSenha = Senha, @id = ID_User FROM INSERTED
+	SET @criptoSenha = CONVERT(VARCHAR(300), HASHBYTES('SHA2_256', @criptoSenha), 2) -- SHA2_256 para criptografia geral
+	UPDATE [dbo].[Users_Funcionarios] SET Senha = @criptoSenha WHERE ID_User = @id
+END
+GO
+
+--Ao longo dos testes foi criada e apagada diversas vezes esta trigger para alterar o tipo de hash (MD2, MD4, MD5, SHA1, SHA2_256, SHA2_512)
+
+--Habilitaçãoo da trigger:
+ALTER TABLE [dbo].[Users_Funcionarios] ENABLE TRIGGER [TGR_Users_Funcionarios]
+GO
+
+--/////////////////////
+
+INSERT INTO Users_Funcionarios(UserName, Senha, Matricula)
+VALUES('KAMILLYF55',')C#Za5gn^#','FG3470');
+
+SELECT * FROM Users_Funcionarios;
+
+COMMIT
+
+--Fim da definição de criptografia
