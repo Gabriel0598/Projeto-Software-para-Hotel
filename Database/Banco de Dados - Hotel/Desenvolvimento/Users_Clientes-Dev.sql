@@ -18,20 +18,10 @@ VALUES('TESTE1', 'teste1@gmail.com', 'senha1234');
 
 SELECT * FROM Usuarios_Clientes;
 
-BEGIN TRANSACTION
-
-/*
-INSERT INTO Usuarios_Clientes
-(Email_Login)
-SELECT Email_Principal FROM Clientes
-*/
--- Problemas ao tentar relacionar as tabelas;
-ROLLBACK --realizado para reverter alguns testes;
-
-SELECT * FROM Usuarios_Clientes;
-
-BEGIN TRANSACTION
-EXEC sp_rename 'Usuarios_Clientes','Users_Clientes';
+BEGIN TRAN
+EXEC sp_rename
+	'Usuarios_Clientes',
+	'Users_Clientes';
 
 SELECT * FROM Users_Clientes;
 COMMIT

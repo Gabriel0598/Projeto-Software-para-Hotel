@@ -19,7 +19,9 @@ VALUES('JOAO12F', 'afjoao14@gmail.com', 'Teste_1234*');
 SELECT * FROM Usuarios_Clientes;
 
 BEGIN TRANSACTION
-EXEC sp_rename 'Usuarios_Clientes','Users_Clientes';
+EXEC sp_rename
+	'Usuarios_Clientes',
+	'Users_Clientes';
 
 SELECT * FROM Users_Clientes;
 COMMIT
