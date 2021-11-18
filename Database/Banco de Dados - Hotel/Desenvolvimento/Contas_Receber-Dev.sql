@@ -3,13 +3,11 @@ GO
 
 CREATE TABLE Contas_Receber
 (
-CC_Contas_Receber TINYINT PRIMARY KEY NOT NULL,
---Comunicação:
-Ramal_Principal SMALLINT,
-Email_Principal VARCHAR(50),
+CC_Contas_Receber TINYINT,
+
 --Dados de pagamentos:
-Ordem_Recebimento INT,
-CC_Origem TINYINT,
+Ordem_Recebimento INT PRIMARY KEY,
+ID_Reserva INT, --Recebe FK de Hospedagens
 Natureza_Cred VARCHAR(50),
 Descricao_Cred VARCHAR(1000),
 Observacao_Cred VARCHAR(500),
@@ -28,3 +26,11 @@ Dt_Liquidacao DATE --Data da efetiva compensação do recebimento
 )
 
 SELECT * FROM Contas_Receber;
+
+BEGIN TRAN
+
+DROP TABLE Contas_Receber;
+
+COMMIT
+
+ALTER TABLE Contas_Receber ADD CONSTRAINT FK_ID_Reserva FOREIGN KEY (ID_Reserva) REFERENCES Hospedagens(Cod_Reserva);

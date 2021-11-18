@@ -3,13 +3,13 @@ GO
 
 CREATE TABLE Compras
 (
-CC_Compras TINYINT PRIMARY KEY NOT NULL,
+CC_Compras TINYINT NOT NULL,
 --Comunicação:
 Ramal_Principal SMALLINT,
 Email_Principal VARCHAR(50),
 
 --PEDIDO DE COMPRA:
-Num_Pedido VARCHAR(30),
+Num_Pedido VARCHAR(30) PRIMARY KEY, --RecebeFK
 Emissao_Pedido DATE,
 Status_Pedido BIT, --Aprovado ou negado pelo gestor
 Cod_Fornec INT,
@@ -33,3 +33,23 @@ Valor_Parcela DECIMAL(12,2),
 )
 
 SELECT * FROM Compras;
+
+BEGIN TRAN
+
+ALTER TABLE Compras DROP COLUMN Ramal_Principal;
+ALTER TABLE Compras DROP COLUMN Email_Principal;
+
+COMMIT
+
+ALTER TABLE [dbo].[Compras] ALTER COLUMN Cod_Fornec BIGINT;
+
+--FK retorna registro do fornecedor:
+ALTER TABLE Compras ADD CONSTRAINT fk_CNPJ_Forn FOREIGN KEY (Cod_Fornec) REFERENCES Fornecedores_Hotel(CNPJ);
+
+ALTER TABLE [dbo].[Compras] DROP CONSTRAINT PK_Compras;
+
+BEGIN TRAN
+
+DROP TABLE Compras;
+
+COMMIT

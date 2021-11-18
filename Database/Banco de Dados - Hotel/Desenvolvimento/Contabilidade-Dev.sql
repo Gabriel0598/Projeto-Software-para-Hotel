@@ -32,3 +32,27 @@ EXEC sp_rename
 		'COLUMN'
 
 SELECT * FROM Contabilidade;
+
+BEGIN TRAN
+
+ALTER TABLE Contabilidade DROP COLUMN Ramal_Principal;
+ALTER TABLE Contabilidade DROP COLUMN Email_Principal;
+
+COMMIT
+
+--Tratamento para receber dados da reserva:
+ALTER TABLE [dbo].[Contabilidade] ALTER COLUMN Cod_OP INT;
+
+--FK retorna reserva registrada:
+ALTER TABLE Contabilidade ADD CONSTRAINT FK_Cod_Reserva FOREIGN KEY (Cod_OP) REFERENCES Hospedagens(Cod_Reserva);
+--Código da operação retorna reserva
+
+--Tratamento para receber dados de compras:
+EXEC sp_rename 'Contabilidade.Status_CC', 'Pedido_Compra', 'COLUMN';
+EXEC sp_rename 'Contabilidade.Cod_OP', 'Reserva_Hospedagem', 'COLUMN';
+
+ALTER TABLE [dbo].[Contabilidade] ALTER COLUMN Pedido_Compra VARCHAR(30);
+
+--FK retorna compra registrada:
+ALTER TABLE Contabilidade ADD CONSTRAINT FK_ID_PedidoCompra FOREIGN KEY (Pedido_Compra) REFERENCES Compras(Num_Pedido);
+--Código da operação retorna pedido de compra

@@ -3,13 +3,13 @@ GO
 
 CREATE TABLE Contas_Pagar
 (
-CC_Contas_Pagar TINYINT PRIMARY KEY NOT NULL,
+CC_Contas_Pagar TINYINT,
 --Comunicação:
-Ramal_Principal SMALLINT,
-Email_Principal VARCHAR(50),
+--Ramal_Principal SMALLINT,
+--Email_Principal VARCHAR(50),
 --Dados de pagamentos:
-Ordem_Pgto INT,
-CC_Origem TINYINT,
+Ordem_Pgto INT PRIMARY KEY,
+Cod_PedidoCompra VARCHAR(30), ----Recebe FK do Pedido de Compra 
 Natureza_Pgto VARCHAR(50),
 Descricao_Pgto VARCHAR(1000),
 Observacao_Pgto VARCHAR(500),
@@ -27,3 +27,18 @@ Dt_Liquidacao DATE --Data da efetiva compensação do pgto
 )
 
 SELECT * FROM Contas_Pagar;
+
+BEGIN TRAN
+
+ALTER TABLE Contas_Pagar DROP COLUMN Ramal_Principal;
+ALTER TABLE Contas_Pagar DROP COLUMN Email_Principal;
+
+COMMIT
+
+BEGIN TRAN
+
+DROP TABLE Contas_Pagar;
+
+COMMIT
+
+ALTER TABLE Contas_Pagar ADD CONSTRAINT FK_Pgto_Compra FOREIGN KEY (Cod_PedidoCompra) REFERENCES Compras(Num_Pedido);

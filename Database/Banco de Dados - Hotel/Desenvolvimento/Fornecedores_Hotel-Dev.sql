@@ -6,7 +6,7 @@ CREATE TABLE Fornecedores_Hotel
 --DADOS DE IDENTIFICAÇÃO:
 Cod_Fornec INT IDENTITY (1,1),
 Status_Fornecedor BIT, --Ativo ou inativo
-CNPJ BIGINT NOT NULL PRIMARY KEY,
+CNPJ BIGINT NOT NULL PRIMARY KEY, --Realiza comunicação com compras
 Razao_Social VARCHAR(50) NOT NULL,
 Nome_Fantasia VARCHAR(50),
 Inscr_Estad INT,
