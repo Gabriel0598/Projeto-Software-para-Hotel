@@ -34,6 +34,9 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 
+--Preparar hash:
+ALTER TABLE [dbo].[Users_Funcionarios] ALTER COLUMN Senha VARCHAR(64);
+
 --Criação de trigger para efetivar criptografia:
 CREATE TRIGGER TGR_Users_Funcionarios
 ON [dbo].[Users_Funcionarios]
@@ -61,8 +64,20 @@ GO
 INSERT INTO Users_Funcionarios(UserName, Senha, Matricula)
 VALUES('KAMILLYF55',')C#Za5gn^#','FG3470');
 
+INSERT INTO Users_Funcionarios(UserName, Senha, Matricula)
+VALUES('ENRICO44','0wsaDfWc','FG5538');
+
 SELECT * FROM Users_Funcionarios;
 
 COMMIT
 
 --Fim da definição de criptografia
+
+BEGIN TRAN
+
+--Alteração de nome da constraint para adequar a necessidade:
+EXEC sp_rename 'Users_Funcionarios.Cod_Login', 'Cod_Funcionario', 'COLUMN'; --Renomeada coluna para adequação
+
+SELECT * FROM Users_Funcionarios;
+
+COMMIT

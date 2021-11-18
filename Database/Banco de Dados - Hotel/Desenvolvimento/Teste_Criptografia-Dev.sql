@@ -274,7 +274,7 @@ SELECT * FROM Teste_Criptografia;
 
 --Comparação de hashes, basta alterar a senha '1234' por outra para testar os retornos de hashs possíveis:
 
-DECLARE @ds_senha VARCHAR(100) = '1234';
+DECLARE @ds_senha VARCHAR(100) = 'Senha1234';
 PRINT 'Senha..........' + @ds_senha
 PRINT 'Hash md2..............' + CONVERT(VARCHAR(300), HASHBYTES('md2', @ds_senha), 2)
 PRINT 'Hash md4..............' + CONVERT(VARCHAR(300), HASHBYTES('md4', @ds_senha), 2)

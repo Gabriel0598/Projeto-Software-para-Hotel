@@ -21,3 +21,7 @@ Hidromassagem BIT,
 )
 
 SELECT * FROM Acomodacoes;
+
+ALTER TABLE Acomodacoes ADD CONSTRAINT Pk_ID_Acomod PRIMARY KEY (ID_Acomod);
+
+SELECT * FROM Acomodacoes;
