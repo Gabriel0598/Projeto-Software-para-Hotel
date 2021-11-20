@@ -1,0 +1,2 @@
+Inicializando repositório git vazio - Projeto geral
+Primeiro commit do Marcos
