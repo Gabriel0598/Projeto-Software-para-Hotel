@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="elysium.app.unihotel.ui.login.Login">
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="295dp"
+        android:layout_height="58dp"
+        android:layout_gravity="start"
+        android:layout_marginStart="45dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginBottom="71dp"
+        android:backgroundTint="@color/design_default_color_on_secondary"
+        android:enabled="false"
+        android:text="@string/opcaoLogin"
+        android:textColor="@color/amarelo_logo"
+        android:textSize="@dimen/titulo"
+        app:layout_constraintBottom_toTopOf="@+id/textView6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtEsquecerSenha" />
+
+    <TextView
+        android:id="@+id/txtEsquecerSenha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginBottom="3dp"
+        android:text="@string/esquecer_senha"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintBottom_toTopOf="@+id/btnLogin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/campoPassword2" />
+
+    <EditText
+        android:id="@+id/campoPassword2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="41dp"
+        android:autofillHints="@string/prompt_password"
+        android:hint="@string/prompt_password"
+        android:imeActionLabel="@string/inscreva_se"
+        android:imeOptions="actionDone"
+        android:inputType="textPassword"
+        android:selectAllOnFocus="true"
+        android:textColor="@color/design_default_color_on_secondary"
+        app:layout_constraintBottom_toTopOf="@+id/txtEsquecerSenha"
+        app:layout_constraintEnd_toEndOf="@+id/campoEmail2"
+        app:layout_constraintStart_toStartOf="@+id/txtEsquecerSenha"
+        app:layout_constraintTop_toBottomOf="@+id/txtSenha" />
+
+    <EditText
+        android:id="@+id/campoEmail2"
+        android:layout_width="319dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="52dp"
+        android:autofillHints="@string/prompt_email"
+        android:hint="@string/prompt_email"
+        android:inputType="textEmailAddress"
+        android:selectAllOnFocus="true"
+        android:textColor="@color/design_default_color_on_secondary"
+        app:layout_constraintBottom_toTopOf="@+id/txtSenha"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/txtEmail" />
+
+    <TextView
+        android:id="@+id/txtEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:text="@string/txtEndEmail"
+        android:textColor="@color/preto_geral"
+        android:textSize="@dimen/textoGeral"
+        app:layout_constraintBottom_toTopOf="@+id/campoEmail2"
+        app:layout_constraintStart_toStartOf="@+id/campoEmail2"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/txtSenha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="42dp"
+        android:layout_marginBottom="2dp"
+        android:text="@string/txtSenha"
+        android:textColor="@color/design_default_color_on_secondary"
+        android:textSize="@dimen/textoGeral"
+        app:layout_constraintBottom_toTopOf="@+id/campoPassword2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/campoEmail2" />
+
+    <ProgressBar
+        android:id="@+id/loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="165dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="46dp"
+        android:layout_marginBottom="15dp"
+        android:text="@string/opcaoLogin"
+        android:textColor="@color/design_default_color_on_secondary"
+        android:textColorHighlight="@color/preto_geral"
+        android:textColorHint="@color/preto_geral"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/txtEmail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtSemConta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginEnd="7dp"
+        android:text="@string/sem_conta"
+        android:textColor="@color/preto_geral"
+        android:textSize="@dimen/textoGeral"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView6"
+        app:layout_constraintEnd_toStartOf="@+id/textView6"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="89dp"
+        android:layout_height="18dp"
+        android:layout_marginEnd="124dp"
+        android:layout_marginBottom="205dp"
+        android:text="@string/inscreva_se"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/textoGeral"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtSemConta"
+        app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
+</androidx.constraintlayout.widget.ConstraintLayout>

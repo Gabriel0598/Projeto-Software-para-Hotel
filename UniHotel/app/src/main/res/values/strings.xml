@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">UniHotel_Principal</string>
+    <string name="login">LOGIN</string>
+    <string name="inscrever">INSCREVER - SE</string>
+    <string name="descrip_logo">Logo UniHotel</string>
+    <string name="txt_criarConta">Crie uma conta</string>
+    <string name="txtEndEmail">Endereço de e-mail</string>
+    <string name="txtSenha">Senha</string>
+    <string name="txtNome">Nome</string>
+    <string name="txtSobrenome">Sobrenome</string>
+    <string name="criar_conta">Criar Conta</string>
+    <string name="termos_1">Ao se inscrever, você aceita os</string>
+    <string name="termos_2"><a href="https://www.hoteis.com/customer_care/terms_conditions.html">Termos e condições</a></string>
+    <string name="termos_3"><a href="https://pt.hoteis.com/customer_care/privacy.html">Política de Privacidade</a></string>
+    <string name="title_activity_login">Login</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="inscreva_se">Inscreva - se</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="opcaoLogin">Fazer Login</string>
+    <string name="esquecer_senha">Esqueceu sua senha?</string>
+    <string name="sem_conta">Não tem uma conta?</string>
+</resources>

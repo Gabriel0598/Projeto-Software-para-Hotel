@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="elysium.app.unihotel.CriarConta">
+
+    <Button
+        android:id="@+id/btnCriarConta"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginBottom="79dp"
+        android:backgroundTint="@android:color/background_dark"
+        android:text="@string/criar_conta"
+        android:textColor="@color/amarelo_logo"
+        android:textSize="@dimen/titulo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txtTermos"
+        android:layout_width="173dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginEnd="7dp"
+        android:text="@string/termos_1"
+        android:textColor="@android:color/background_dark"
+        android:textSize="12sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txtCondicoes"
+        app:layout_constraintEnd_toStartOf="@+id/txtCondicoes"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txtDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginBottom="3dp"
+        android:text="e a"
+        android:textColor="@android:color/background_dark"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnCriarConta"
+        app:layout_constraintStart_toStartOf="@+id/btnCriarConta" />
+
+    <TextView
+        android:id="@+id/txtCondicoes"
+        android:layout_width="121dp"
+        android:layout_height="13dp"
+        android:layout_marginEnd="68dp"
+        android:layout_marginBottom="24dp"
+        android:autoLink="web"
+        android:text="@string/termos_2"
+        android:textColor="@color/link_azul"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnCriarConta"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtTermos" />
+
+    <TextView
+        android:id="@+id/txtPolitica"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginBottom="3dp"
+        android:autoLink="web"
+        android:text="@string/termos_3"
+        android:textColor="@color/link_azul"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnCriarConta"
+        app:layout_constraintStart_toEndOf="@+id/txtDesc" />
+
+    <EditText
+        android:id="@+id/campoEmailAddress"
+        android:layout_width="335dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="22dp"
+        android:autofillHints="email@gmail.com"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/design_default_color_on_secondary"
+        app:layout_constraintBottom_toTopOf="@+id/textSenha"
+        app:layout_constraintEnd_toEndOf="@+id/txtCriarConta"
+        app:layout_constraintStart_toEndOf="@+id/txtCriarConta"
+        app:layout_constraintTop_toBottomOf="@+id/txtCriarConta" />
+
+    <TextView
+        android:id="@+id/txtEndEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:text="@string/txtEndEmail"
+        app:layout_constraintBottom_toTopOf="@+id/campoEmailAddress"
+        app:layout_constraintStart_toStartOf="@+id/campoEmailAddress" />
+
+    <EditText
+        android:id="@+id/campoSenha"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="19dp"
+        android:autofillHints="Senha1234"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:textColor="@color/preto_geral"
+        app:layout_constraintBottom_toBottomOf="@+id/avisoSenha"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textSenha" />
+
+    <TextView
+        android:id="@+id/textSenha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="191dp"
+        android:text="@string/txtSenha"
+        app:layout_constraintStart_toStartOf="@+id/campoSenha"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtCriarConta"
+        android:layout_width="166dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="62dp"
+        android:text="@string/txt_criarConta"
+        android:textColor="@android:color/background_dark"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/avisoSenha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="48dp"
+        android:text="De 6 a 8 caracteres"
+        app:layout_constraintStart_toStartOf="@+id/campoSenha"
+        app:layout_constraintTop_toBottomOf="@+id/textSenha" />
+
+    <EditText
+        android:id="@+id/campoNomeCliente"
+        android:layout_width="0dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginEnd="31dp"
+        android:autofillHints="João"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColor="@color/preto_geral"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtSobrenome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="36dp"
+        android:text="@string/txtSobrenome"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/campoNomeCliente" />
+
+    <EditText
+        android:id="@+id/campoSobrenomeCliente"
+        android:layout_width="0dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="31dp"
+        android:autofillHints="Silva"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColor="@color/preto_geral"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtSobrenome" />
+
+    <TextView
+        android:id="@+id/txtNome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txtNome"
+        app:layout_constraintBottom_toTopOf="@+id/campoNomeCliente"
+        app:layout_constraintStart_toStartOf="@+id/campoNomeCliente" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
