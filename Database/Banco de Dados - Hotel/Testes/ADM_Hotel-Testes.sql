@@ -1,0 +1,32 @@
+USE UniHotel_Testes
+GO
+
+CREATE TABLE ADM_Hotel
+(
+--DADOS DE IDENTIFICAÇÃO:
+CC_ADM TINYINT PRIMARY KEY NOT NULL,
+CNPJ BIGINT,
+Razao_Social VARCHAR(50),
+Nome_Fantasia VARCHAR(50),
+Inscr_Estad INT,
+
+--CONTATO:
+Ramal_Principal SMALLINT,
+Email_Principal VARCHAR(50),
+DDD_Comercial1 TINYINT NOT NULL,
+Tel_Comercial1 INT NOT NULL,
+DDD_Comercial2 TINYINT,
+Tel_Comercial2 INT,
+
+--ENDERECO:
+Logradouro VARCHAR(50) NOT NULL,
+Numero VARCHAR(10) NOT NULL,
+Complemento VARCHAR(50),
+Bairro_Regiao VARCHAR(30) NOT NULL,
+Cidade VARCHAR(50) NOT NULL,
+CEP INT NOT NULL,
+Estado_Provincia VARCHAR(30),
+Pais VARCHAR(50) NOT NULL
+)
+
+SELECT * FROM ADM_Hotel;
