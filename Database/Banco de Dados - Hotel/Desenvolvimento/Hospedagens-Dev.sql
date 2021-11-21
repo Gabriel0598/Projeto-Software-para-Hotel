@@ -169,3 +169,28 @@ SELECT * FROM Hospedagens;
 COMMIT
 
 SELECT * FROM Hospedagens;
+
+ALTER TABLE Hospedagens ALTER COLUMN Mat_Func_Reserva INT;
+
+--FK retorna funcionário que realizou reserva:
+ALTER TABLE Hospedagens ADD CONSTRAINT FK_ID_Funcionario FOREIGN KEY (Mat_Func_Reserva) REFERENCES Funcionarios(Cod_Funcionario);
+
+BEGIN TRAN
+
+EXEC sp_rename 'Hospedagens.Dt_Reserva', 'Dt_Hora_Reserva', 'COLUMN';
+SELECT * FROM Hospedagens;
+
+COMMIT
+
+ALTER TABLE Hospedagens ALTER COLUMN Num_Ap INT;
+
+--FK retorna funcionário que realizou reserva:
+ALTER TABLE [dbo].[Hospedagens] WITH NOCHECK ADD CONSTRAINT FK_ID_Quarto FOREIGN KEY (Num_Ap) REFERENCES Acomodacoes (ID_Acomod);
+
+BEGIN TRAN
+DELETE FROM Hospedagens WHERE Num_Ap = '12';
+
+ROLLBACK
+
+--FK retorna dados da ADM do hotel:
+ALTER TABLE [dbo].[Hospedagens] WITH NOCHECK ADD CONSTRAINT FK_CNPJ_Hotel FOREIGN KEY (CNPJ_Prestador) REFERENCES ADM_Hotel(CNPJ);

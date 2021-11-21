@@ -44,12 +44,5 @@ COMMIT
 ALTER TABLE [dbo].[Compras] ALTER COLUMN Cod_Fornec BIGINT;
 
 --FK retorna registro do fornecedor:
-ALTER TABLE Compras ADD CONSTRAINT fk_CNPJ_Forn FOREIGN KEY (Cod_Fornec) REFERENCES Fornecedores_Hotel(CNPJ);
-
-ALTER TABLE [dbo].[Compras] DROP CONSTRAINT PK_Compras;
-
-BEGIN TRAN
-
-DROP TABLE Compras;
-
-COMMIT
+ALTER TABLE [dbo].[Compras] ALTER COLUMN Cod_Fornec BIGINT;
+ALTER TABLE Compras ADD CONSTRAINT FK_CNPJ_Forn FOREIGN KEY (Cod_Fornec) REFERENCES Fornecedores_Hotel(CNPJ);
