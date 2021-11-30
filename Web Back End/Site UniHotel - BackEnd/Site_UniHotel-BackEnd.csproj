@@ -1,0 +1,51 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>Site_UniHotel___BackEnd</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="Views\Telas Site\cadastro-cd.cshtml" />
+    <Content Remove="Views\Telas Site\cadastro-cd2.cshtml" />
+    <Content Remove="Views\Telas Site\cadastro-cd3.cshtml" />
+    <Content Remove="Views\Telas Site\cadastro-login.cshtml" />
+    <Content Remove="Views\Telas Site\contato.cshtml" />
+    <Content Remove="Views\Telas Site\Index.cshtml" />
+    <Content Remove="Views\Telas Site\O-Hotel.cshtml" />
+    <Content Remove="Views\Telas Site\pix.cshtml" />
+    <Content Remove="Views\Telas Site\quarto.cshtml" />
+    <Content Remove="Views\Telas Site\reserva.cshtml" />
+    <Content Remove="Views\Telas Site\tela-de-pagamento.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Views\Telas Site\cadastro-cd.cshtml" />
+    <None Include="Views\Telas Site\cadastro-cd2.cshtml" />
+    <None Include="Views\Telas Site\cadastro-cd3.cshtml" />
+    <None Include="Views\Telas Site\cadastro-login.cshtml" />
+    <None Include="Views\Telas Site\contato.cshtml" />
+    <None Include="Views\Telas Site\Index.cshtml" />
+    <None Include="Views\Telas Site\O-Hotel.cshtml" />
+    <None Include="Views\Telas Site\pix.cshtml" />
+    <None Include="Views\Telas Site\quarto.cshtml" />
+    <None Include="Views\Telas Site\reserva.cshtml" />
+    <None Include="Views\Telas Site\tela-de-pagamento.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EntityFramework" Version="6.4.4" />
+    <PackageReference Include="Microsoft.AspNetCore" Version="2.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.12" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.12">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+  </ItemGroup>
+
+</Project>
