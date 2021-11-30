@@ -27,3 +27,104 @@ Dt_Liquidacao DATE --Data da efetiva compensação do pgto
 )
 
 SELECT * FROM Contas_Pagar;
+
+
+INSERT INTO Contas_Pagar
+
+( Ramal_Principal,
+Email_Principal,
+
+Ordem_Pgto,
+CC_Origem,
+Natureza_Pgto,
+Descricao_Pgto,
+Observacao_Pgto,
+Dt_Vencto, --Data prevista para pgto
+Cod_Benef, --Beneficiário
+Razao_Social,
+Valor_Bruto,
+Tributos,
+Valor_Liquido,
+Despesa, --Classificação contábil
+Tipo_Pgto,
+Cod_Compens, --Código de compensacao bancaria
+Banco,
+Dt_Liquidacao --Data da efetiva compensação do pgto
+)
+
+
+
+VALUES
+
+(
+'',
+'financeiro@unihotel.com.br',
+
+'056210',
+'1021843-2',
+'12',
+'Contas a Pagar Caled Limpeza e Higiene'
+'2 Unidades de Detergente Líquido Clear Ypê 500ml CX 24',
+'2021-11-15',
+'356',
+'Caleb Distribuidora de Limpeza Ltda',
+'81,50',
+'45',
+'81,50',
+'23',
+'Cartão Crédito',
+'422'
+'Banco Safra S.A.',
+'2021-11-18'
+)
+
+-- 2
+
+INSERT INTO Contas_Pagar
+
+( 
+Ramal_Principal,
+Email_Principal,
+
+Ordem_Pgto,
+CC_Origem,
+Natureza_Pgto,
+Descricao_Pgto,
+Observacao_Pgto,
+Dt_Vencto, --Data prevista para pgto
+Cod_Benef, --Beneficiário
+Razao_Social,
+Valor_Bruto,
+Tributos,
+Valor_Liquido,
+Despesa, --Classificação contábil
+Tipo_Pgto,
+Cod_Compens, --Código de compensacao bancaria
+Banco,
+Dt_Liquidacao --Data da efetiva compensação do pgto
+)
+
+VALUES
+
+'123',
+'financeiro@unihotel.com.br',
+
+'152132',
+'1021843-2',
+'434',
+'Contas a Pagar Caled Limpeza e Higiene'
+'36 unidades Papel Higiênico 30m Folha Simples Branco PT 4 RL Golden',
+'2021-09-15',
+'3245',
+'Caleb Distribuidora de Limpeza Ltda', 
+'226,40',
+'242',
+'226,40',
+'122',
+'Cartão Crédito',
+'422'
+'Banco Safra S.A.',
+'2021-09-18'
+)
+
+SELECT * FROM Contas_Pagar;

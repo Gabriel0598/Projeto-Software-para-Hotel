@@ -63,3 +63,158 @@ Passap_Acomp5 VARCHAR(15),
 )
 
 SELECT * FROM Hospedagens;
+
+INSERT INTO Hospedagens
+(
+Nome_Hospede,
+CPF_Hospede,
+Passaporte_Hospede,
+
+Mat_Func_Reserva,
+Num_Ap,
+Dt_Reserva,
+
+ID_Checkin,
+Dt_Entrada,
+Mat_Func_Checkin,
+ID_Checkout,
+Dt_Saida,
+Mat_Func_Checkout,
+
+Num_NFS,
+Cod_Verif,
+Dt_Hora_Emissao,
+CNPJ_Prestador,
+Razao_Social,
+CPF_Tomador,
+Nome_Tomador,
+Valor_Total,
+Valor_ISS,
+Observacoes,
+
+Tipo_Pgto,
+Dt_Pgto,
+Quant_Parc,
+Valor_Parc,
+Valor_Pgto
+)
+
+VALUES
+
+(
+'Isaac Fernando Leonardo Baptista',
+'56723554558',
+'121',
+
+'58456',
+'39',
+'2021-11-21',
+
+'1234',
+'2021-11-2021',
+'12',
+'4321',
+'23-11-2021',
+'321',
+
+'000.001',
+'57 EA B1',
+'2021-11-21',
+'310.044.003.130',
+'UNIPIM HOTEL BRASIL LTDA',
+'56723554558',
+'Isaac Fernando Leonardo Baptista',
+'291,00',
+'5,82',
+'13',
+
+'Cartão Débito',
+'2021-11-23',
+'0',
+'123',
+'296,82'
+)
+
+-- 2 -----------------
+
+
+
+INSERT INTO Hospedagens
+(
+Nome_Hospede,
+CPF_Hospede,
+Passaporte_Hospede,
+
+Mat_Func_Reserva,
+Num_Ap,
+Dt_Reserva,
+
+ID_Checkin,
+Dt_Entrada,
+Mat_Func_Checkin,
+ID_Checkout,
+Dt_Saida,
+Mat_Func_Checkout,
+
+Num_NFS,
+Cod_Verif,
+Dt_Hora_Emissao,
+CNPJ_Prestador,
+Razao_Social,
+CPF_Tomador,
+Nome_Tomador,
+Valor_Total,
+Valor_ISS,
+Observacoes,
+
+Tipo_Pgto,
+Dt_Pgto,
+Quant_Parc,
+Valor_Parc,
+Valor_Pgto
+
+Acompanhante1,
+CPF_Acomp1,
+Passap_Acomp1
+)
+
+INSERT INTO Hospedagens
+(
+'Pedro Henrique Felipe Almeida',
+'91740166280',
+'23',
+
+'58456',
+'15',
+'10-09-2021',
+
+'1234',
+'2021-09-10',
+'58456',
+'4321',
+'2021-09-17',
+'12',
+
+'000.002',
+'60 EA B2',
+'2021-09-11',
+'310.044.003.130',
+'UNIPIM HOTEL BRASIL LTDA',
+'91740166280',
+'Pedro Henrique Felipe Almeida',
+'2465,00',
+'49,30',
+'Suite Vip Casal',
+
+'Cartão Crédito',
+'2021-09-17',
+'2',
+'1257,15',
+'2514,30'
+
+'Sabrina Rosângela Bruna Rocha',
+'12729003800',
+'464'
+)
+
+SELECT * FROM Hospedagens;
