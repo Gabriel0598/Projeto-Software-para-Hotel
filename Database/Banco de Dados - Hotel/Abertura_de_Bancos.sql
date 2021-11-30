@@ -1,0 +1,4 @@
+CREATE DATABASE UniHotel_Desenvolvimento
+CREATE DATABASE UniHotel_Testes
+CREATE DATABASE UniHotel_Producao
+GO
