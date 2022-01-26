@@ -3,18 +3,15 @@ GO
 
 CREATE TABLE Contabilidade
 (
-Centro_Custo TINYINT PRIMARY KEY NOT NULL,
---Comunicação:
-Ramal_Principal SMALLINT,
-Email_Principal VARCHAR(50),
+CC_Contabil TINYINT PRIMARY KEY NOT NULL,
 
 --CONTA CONTÁBIL:
 Cod_CC BIGINT, --Codigo da conta contábil
 Descr_CC VARCHAR(50),
-Status_CC BIT, --Ativa ou inativa
+Pedido_Compra VARCHAR(30), --Ativa ou inativa
 
 --LIVRO RAZÃO (Lançamentos):
-Cod_OP BIGINT, --Código da operação
+Reserva_Hospedagem INT, --Código da operação
 Dt_OP DATE,
 Tipo_Doc_OP VARCHAR(15),
 Doc_OP BIGINT,
@@ -44,7 +41,7 @@ COMMIT
 ALTER TABLE [dbo].[Contabilidade] ALTER COLUMN Cod_OP INT;
 
 --FK retorna reserva registrada:
-ALTER TABLE Contabilidade ADD CONSTRAINT FK_Cod_Reserva FOREIGN KEY (Cod_OP) REFERENCES Hospedagens(Cod_Reserva);
+ALTER TABLE Contabilidade ADD CONSTRAINT FK_Cod_Reserva FOREIGN KEY (Reserva_Hospedagem) REFERENCES Hospedagens(Cod_Reserva);
 --Código da operação retorna reserva
 
 --Tratamento para receber dados de compras:

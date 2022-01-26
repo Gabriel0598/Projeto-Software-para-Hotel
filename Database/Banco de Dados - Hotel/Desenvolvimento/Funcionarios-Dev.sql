@@ -5,7 +5,6 @@ CREATE TABLE Funcionarios
 (
 --DADOS DE IDENTIFICAÇÃO:
 Cod_Funcionario INT IDENTITY(1,1) PRIMARY KEY,
-Sit_Cadastral BIT NOT NULL,
 Nome_Completo VARCHAR(100) NOT NULL,
 Data_Nasc DATE NOT NULL,
 Genero VARCHAR(15),
@@ -61,11 +60,6 @@ Nivel_Formacao VARCHAR(30),
 Situac_Formacao VARCHAR(10),
 Curso VARCHAR(50),
 Instituicao VARCHAR(100),
-Dt_Ingresso DATE,
-
---CONTRATUAL:
-Dt_Admissao DATE NOT NULL,
-Dt_Deslig_Afast DATE,
 )
 
 SELECT * FROM Funcionarios;

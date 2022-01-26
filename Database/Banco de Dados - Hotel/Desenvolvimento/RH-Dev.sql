@@ -16,6 +16,11 @@ CONSTRAINT FK_CodFuncionario FOREIGN KEY (Cod_Funcionario) REFERENCES Funcionari
 Ramal SMALLINT,
 Email VARCHAR(50),
 Cargo VARCHAR(50),
+
+--Datas:
+Dt_Ingresso DATE,
+Dt_Admissao DATE NOT NULL,
+Dt_Deslig_Afast DATE
 )
 
 BEGIN TRAN
@@ -24,3 +29,5 @@ ALTER TABLE RH ADD Dt_Ingresso DATE, Dt_Admissao DATE NOT NULL, Dt_Deslig_Afast 
 SELECT * FROM RH;
 
 COMMIT
+
+SELECT * FROM RH;

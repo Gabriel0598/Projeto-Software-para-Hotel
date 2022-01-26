@@ -4,15 +4,12 @@ GO
 CREATE TABLE Compras
 (
 CC_Compras TINYINT NOT NULL,
---Comunicação:
-Ramal_Principal SMALLINT,
-Email_Principal VARCHAR(50),
 
 --PEDIDO DE COMPRA:
 Num_Pedido VARCHAR(30) PRIMARY KEY, --RecebeFK
 Emissao_Pedido DATE,
 Status_Pedido BIT, --Aprovado ou negado pelo gestor
-Cod_Fornec INT,
+Cod_Fornec BIGINT,
 Fornecedor VARCHAR(50),
 Cod_Item VARCHAR(30), --Dados do material no almoxarifado
 Descricao VARCHAR(50),

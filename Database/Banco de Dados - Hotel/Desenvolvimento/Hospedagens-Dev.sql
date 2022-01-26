@@ -11,9 +11,9 @@ CPF_Hospede BIGINT,
 Passaporte_Hospede VARCHAR(15),
 
 --DADOS DA RESERVA:
-Mat_Func_Reserva VARCHAR(10),
-Num_Ap VARCHAR(5) NOT NULL,
-Dt_Reserva DATETIME NOT NULL,
+Mat_Func_Reserva INT,
+Num_Ap INT NOT NULL,
+Dt_Hora_Reserva DATETIME NOT NULL,
 
 ID_Checkin VARCHAR(10),
 Dt_Entrada DATETIME,
@@ -153,14 +153,15 @@ GO
 ALTER TABLE [dbo].[Hospedagens] ENABLE TRIGGER [TGR_Hospedagens]
 GO
 
+ALTER TABLE Hospedagens ALTER COLUMN Num_Ap INT; --Retirada de obrigação de dados;
+ALTER TABLE Hospedagens ALTER COLUMN CNPJ_Prestador BIGINT; --Retirada de obrigação de dados;
+
 --Teste:
 
-INSERT INTO Hospedagens(Nome_Hospede, CPF_Hospede, Passaporte_Hospede, Num_Ap, Dt_Reserva, Num_NFS, Cod_Verif, Dt_Hora_Emissao,
-CNPJ_Prestador, Razao_Social, CPF_Tomador, Nome_Tomador, Valor_Total, Tipo_Pgto, Valor_Pgto,
+INSERT INTO Hospedagens(Nome_Hospede, CPF_Hospede, Passaporte_Hospede, Dt_Hora_Reserva, Num_NFS, Cod_Verif, Dt_Hora_Emissao, Razao_Social, CPF_Tomador, Nome_Tomador, Valor_Total, Tipo_Pgto, Valor_Pgto,
 Acompanhante1, CPF_Acomp1, Passap_Acomp1, Acompanhante2, CPF_Acomp2, Passap_Acomp2, Acompanhante3, CPF_Acomp3, Passap_Acomp3,
 Acompanhante4, CPF_Acomp4, Passap_Acomp4, Acompanhante5, CPF_Acomp5, Passap_Acomp5)
-VALUES('Renata Yasmin dos Santos', 26176355893, '47433215429', 12, '20211117', 3456, 'EX43B6', '20211117 10:50:01 AM', 37341013000134,
-'UniHotel Serviços Hoteleiros LTDA', 26176355893, 'Renata Yasmin dos Santos', 600.00, 'Credito', 600.00,
+VALUES('Renata Yasmin dos Santos', 26176355893, '47433215429', '20211117', 3456, 'EX43B6', '20211117 10:50:01 AM', 'UniHotel Serviços Hoteleiros LTDA', 26176355893, 'Renata Yasmin dos Santos', 600.00, 'Credito', 600.00,
 'Camila Manuela Alves', 61801320381, '64710443103', 'Sara Eliane Beatriz Galvão', 71342369513, '93564281980', 'Alícia Bianca Caldeira', 59078034440, '12567826160', 'Rafael Leonardo Monteiro',
 11505681600, '80045202345', 'Murilo Caleb Anderson Costa', 57024778636, '62246182166');
 
@@ -181,8 +182,6 @@ EXEC sp_rename 'Hospedagens.Dt_Reserva', 'Dt_Hora_Reserva', 'COLUMN';
 SELECT * FROM Hospedagens;
 
 COMMIT
-
-ALTER TABLE Hospedagens ALTER COLUMN Num_Ap INT;
 
 --FK retorna funcionário que realizou reserva:
 ALTER TABLE [dbo].[Hospedagens] WITH NOCHECK ADD CONSTRAINT FK_ID_Quarto FOREIGN KEY (Num_Ap) REFERENCES Acomodacoes (ID_Acomod);

@@ -4,9 +4,7 @@ GO
 CREATE TABLE Contas_Pagar
 (
 CC_Contas_Pagar TINYINT,
---Comunicação:
---Ramal_Principal SMALLINT,
---Email_Principal VARCHAR(50),
+
 --Dados de pagamentos:
 Ordem_Pgto INT PRIMARY KEY,
 Cod_PedidoCompra VARCHAR(30), ----Recebe FK do Pedido de Compra 

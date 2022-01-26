@@ -3,30 +3,28 @@ GO
 
 CREATE TABLE Dados_Financeiros_Clientes
 (
-ID_Cliente INT IDENTITY(1,1) PRIMARY KEY,
+ID_Dados INT IDENTITY(1,1) PRIMARY KEY, --Previamente chamava-se ID_Cliente, alterada para padronização;
 --IDENTIFICAÇÃO:
-Nome_Completo VARCHAR(100) NOT NULL,
-CPF BIGINT,
-Num_Passaporte VARCHAR(15),
+Cod_Cliente INT,
 --DADOS DE CARTÕES:
 Tipo1 VARCHAR(10), --Débito ou crédito
 Banco_Adm1 VARCHAR(30), --Administradora do cartão
 Bandeira1 VARCHAR(20),
 Num_Cartao1 BIGINT,
 Dt_Validade1 DATE,
-CVV1 TINYINT, --Código de verificação
+CVV1 SMALLINT, --Código de verificação
 Tipo2 VARCHAR(10),
 Banco_Adm2 VARCHAR(30),
 Bandeira2 VARCHAR(20),
 Num_Cartao2 BIGINT,
 Dt_Validade2 DATE,
-CVV2 TINYINT,
+CVV2 SMALLINT,
 Tipo3 VARCHAR(10),
 Banco_Adm3 VARCHAR(30),
 Bandeira3 VARCHAR(20),
 Num_Cartao3 BIGINT,
 Dt_Validade3 DATE,
-CVV3 TINYINT,
+CVV3 SMALLINT,
 )
 
 SELECT * FROM Dados_Financeiros_Clientes;
@@ -56,14 +54,14 @@ ALTER COLUMN CVV3 SMALLINT
 
 COMMIT
 
-INSERT INTO Dados_Financeiros_Clientes(Nome_Completo, CPF, Tipo1, Banco_Adm1, Bandeira1, Num_Cartao1, Dt_Validade1, CVV1)
-VALUES ('Calebe Iago Julio Lopes', 06452210408, 'Crédito', 'Itaú', 'American Express', 376413808900378, '18/06/2022', 216);
+INSERT INTO Dados_Financeiros_Clientes(Cod_Cliente, Tipo1, Banco_Adm1, Bandeira1, Num_Cartao1, Dt_Validade1, CVV1)
+VALUES (52210408, 'Crédito', 'Itaú', 'American Express', 376413808900378, '2022/06/18', 216);
 
-INSERT INTO Dados_Financeiros_Clientes(Nome_Completo, CPF, Tipo1, Banco_Adm1, Bandeira1, Num_Cartao1, Dt_Validade1, CVV1)
-VALUES ('Martin Lorenzo Gonçalves', 11150550899, 'Crédito', 'Bradesco', 'American Express', 344355243113803, '18/09/2022', 4717);
+INSERT INTO Dados_Financeiros_Clientes(Cod_Cliente, Tipo1, Banco_Adm1, Bandeira1, Num_Cartao1, Dt_Validade1, CVV1)
+VALUES (50550899, 'Crédito', 'Bradesco', 'American Express', 344355243113803, '2022/09/18', 4717);
 
-INSERT INTO Dados_Financeiros_Clientes(Nome_Completo, CPF, Tipo1, Banco_Adm1, Bandeira1, Num_Cartao1, Dt_Validade1, CVV1)
-VALUES ('Geraldo Carlos Benício da Mata', 19476838027, 'Crédito', 'Santander', 'MasterCard', 5295176148913156, '18/09/2023', 825);
+INSERT INTO Dados_Financeiros_Clientes(Cod_Cliente, Tipo1, Banco_Adm1, Bandeira1, Num_Cartao1, Dt_Validade1, CVV1)
+VALUES (56838027, 'Crédito', 'Santander', 'MasterCard', 5295176148913156, '2023/09/18', 825);
 
 BEGIN TRANSACTION
 
@@ -73,8 +71,8 @@ SELECT
 SELECT * FROM Dados_Financeiros_Clientes;
 ROLLBACK;
 
-INSERT INTO Dados_Financeiros_Clientes(Nome_Completo, Num_Passaporte, Tipo1, Banco_Adm1, Bandeira1, Num_Cartao1, Dt_Validade1, CVV1)
-VALUES ('Pierre Taurant', '05CK02237', 'Crédito', 'Société Générale', 'Visa', 4485751055098192, '18/01/2023', 932);
+INSERT INTO Dados_Financeiros_Clientes(Cod_Cliente, Tipo1, Banco_Adm1, Bandeira1, Num_Cartao1, Dt_Validade1, CVV1)
+VALUES (75122865, 'Crédito', 'Société Générale', 'Visa', 4485751055098192, '2023/01/18', 932);
 
 SELECT * FROM Dados_Financeiros_Clientes;
 
@@ -116,7 +114,7 @@ GO
 SELECT * FROM Dados_Financeiros_Clientes;
 
 --Chave estrangeira para receber dados de cliente:
-ALTER TABLE Dados_Financeiros_Clientes ADD CONSTRAINT FK_Cod_Cliente FOREIGN KEY (Cod_Cliente) REFERENCES Clientes (Cod_Cliente);
+ALTER TABLE Dados_Financeiros_Clientes WITH NOCHECK ADD CONSTRAINT FK_Cod_Cliente FOREIGN KEY (Cod_Cliente) REFERENCES Clientes (Cod_Cliente);
 
 --Convertendo tipo para alocar espaço para a Hash:
 ALTER TABLE [dbo].[Dados_Financeiros_Clientes] ALTER COLUMN Num_Cartao1 VARCHAR(64);
@@ -151,7 +149,7 @@ BEGIN
 	@criptoCVV3 AS VARCHAR(MAX),
 	@id AS INT
 
-	SELECT @id = ID_Cartao, @criptoCartao1 = Num_Cartao1,
+	SELECT @id = ID_Dados, @criptoCartao1 = Num_Cartao1,
 	@criptoCVV1 = CVV1, @criptoCartao2 = Num_Cartao2,
 	@criptoCVV2 = CVV2, @criptoCartao3 = Num_Cartao3,
 	@criptoCVV3 = CVV3 FROM INSERTED
@@ -167,7 +165,7 @@ BEGIN
 	UPDATE [dbo].[Dados_Financeiros_Clientes] SET
 	Num_Cartao1 = @criptoCartao1, CVV1 = @criptoCVV1,
 	Num_Cartao2 = @criptoCartao2, CVV2 = @criptoCVV2,
-	Num_Cartao3 = @criptoCartao3, CVV3 = @criptoCVV3 WHERE ID_Cartao = @id
+	Num_Cartao3 = @criptoCartao3, CVV3 = @criptoCVV3 WHERE ID_Dados = @id
 END
 GO
 
