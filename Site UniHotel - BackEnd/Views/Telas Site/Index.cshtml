@@ -1,0 +1,464 @@
+﻿<!DOCTYPE html>
+<html lang="pt_br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title> UniHotel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Cadastro-login.html">
+
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<!--começo do header-->
+<!--Header start-->
+<body>
+    <!--Header start-->
+    <!--Tela inicial do unihotel -->
+
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="index.html" class="logo">
+                    <img src="imagens/logo2-removebg-preview.png" alt="logo" class="logo-image">
+                </a>
+
+                <div class="hamburger-menu">
+                    <i class="fas fa-bars open-state">
+                    </i>
+                    <i class="fas fa-times close-state"></i>
+                </div>
+                <ul " class="nav-list">
+                    <li class="nav-item">
+                        <a href="Index.html" class="nav-link" style="background-color: transparent; ">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="Cadastro-login.html" class="nav-link" style="background-color: transparent;">Cadastro</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="O-Hotel.html" class="nav-link" style="background-color: transparent;">Serviços</a>
+
+                    </li>
+                    <li class="nav-item">
+                        <a href="reserva.html" class="nav-link" style="background-color: transparent;">Reserva</a>
+
+                    </li>
+                    <li class="nav-item">
+                        <a href="quarto.html" class="nav-link" style="background-color: transparent;">Quartos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contato.html" class="nav-link" style="background-color: transparent;">Contato</a>
+
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
+    </header><!--Header end-->
+    <!--Main start-->
+
+    <main class="main">
+        <!--Hero start-->
+        <div class="hero">
+            <div class="container">
+                <div class="main-heading">
+                    <h1 class="title">UniHotel</h1>
+                    <h2 class="sub-title">Conforto perto de Você</h2>
+                </div>
+
+                <span class="dots"><i class="fas fa-ellipsis-h"></i></span>
+                </a>
+            </div>
+        </div>
+        <!--Hero end-->
+        <!--Booking section start-->
+        <section id="Reserva" class="booking">
+            <div class="container">
+                <form action="" class="form book-form">
+
+                    <div class="input-group">
+                        <label for="check-in" class="input-label">Check in</label>
+                        <input type="date" class="input" id="check-in">
+                    </div>
+                    <div class="input-group">
+                        <label for="check-out" class="input-label">Check out</label>
+                        <input type="date" class="input" id="check-out">
+                    </div>
+                    <div class="input-group">
+                        <label for="adults" class="input-label">Adultos</label>
+                        <select ect class="options" id="adults">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="children" class="input-label">Crianças</label>
+                        <select class="options" id="children">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn form-btn btn-purple">
+                        <a href="quarto.html">Reserve</a>
+                        <span class="dots"><i class="fas fa-ellipsis-h"></i></span>
+                    </button>
+                </form>
+            </div>
+        </section>
+        <!--Booking section end-->
+        <!--Hotels section start-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <div id="wrap_oferecemos">
+            <div class="container home">
+                <h2>O que Oferecemos</h2>
+
+                <ul>
+                    <li> <div class="ico restaurante"></div> <span class="txt">Restaurante </span> </li>
+                    <li> <div class="ico academia"></div> <span class="txt">Academia </span> </li>
+                    <li> <div class="ico piscina"></div> <span class="txt">Piscina </span> </li>
+                    <li> <div class="ico wifi"></div> <span class="txt">Wi-Fi </span> </li>
+                    <li> <div class="ico lavanderia"></div> <span class="txt">Maquina </span> </li>
+                    <li> <div class="ico estacionamento"></div> <span class="txt">Estacionamento </span> </li>
+                    <li> <div class="ico arcondicionado"></div> <span class="txt">Ar condicionado </span> </li>
+                    <li> <div class="ico secador"></div> <span class="txt">Secador </span> </li>
+                    <li> <div class="ico tv"></div> <span class="txt">TV a cabo </span> </li>
+                    <li> <div class="ico frigobar"></div> <span class="txt">Frigobar </span> </li>
+                </ul>
+
+            </div>
+        </div>
+        <section class="hotels">
+            <div class="container">
+
+
+                <h5 class="section-head">
+                    <span class="heading">Quartos Flex Office</span>
+
+
+                </h5>
+                <div class="grid">
+                    <div class="grid-item featured-hotels">
+                        <img class="hotel-image" src="imagens/quarto  escritorio.jpg" alt="">
+                        <h5 class="hotel-name">Flex Office</h5>
+                        <span class="hotel-price">A partir de $200/Night</span>
+                        <div class="hotel-rating">
+                            <i class="fas fa-star rating"></i>
+                            <i class="fas fa-star rating"></i>
+                            <i class="fas fa-star rating"></i>
+                            <i class="fas fa-star rating"></i>
+                            <i class="fas fa-star-half rating"></i>
+                        </div>
+                        <a href="Cadastro-login.html" class="btn btn-gradient">
+                            Reserve agora
+                            <span class="dots"><i class="fas fa-ellipsis-h"></i></span>
+                        </a>
+                    </div>
+                    <div class="grid-item featured-hotels">
+                        <img class="hotel-image" src="imagens/quarto escritorio 2.jpg" alt="">
+                        <h5 class="hotel-name">Flex Office</h5>
+                        <span class="hotel-price">A partir de $200/Night</span>
+                        <div class="hotel-rating">
+                            <i class="fas fa-star rating"></i>
+                            <i class="fas fa-star rating"></i>
+                            <i class="fas fa-star rating"></i>
+                            <i class="fas fa-star rating"></i>
+                            <i class="fas fa-star rating"></i>
+                        </div>
+                        <a href="Cadastro-login.html" class="btn btn-gradient">
+                            Reserve agora
+                            <span class="dots"><i class="fas fa-ellipsis-h"></i></span>
+                        </a>
+                    </div>
+                    <div class="grid-item featured-hotels">
+                        <img class="hotel-image" src="imagens/quarto escritorio 3.jpg" alt="">
+                        <h5 class="hotel-name">Flex Office</h5>
+                        <span class="hotel-price">A partir de $200/Night</span>
+                        <div class="hotel-rating">
+                            <i class="fas fa-star rating"></i>
+                            <i class="fas fa-star rating"></i>
+                            <i class="fas fa-star rating"></i>
+                            <i class="fas fa-star rating"></i>
+                            <i class="fas fa-star-half rating"></i>
+                        </div>
+                        <a href="Cadastro-login.html" class="btn btn-gradient">
+                            Reserve agora
+                            <span class="dots"><i class="fas fa-ellipsis-h"></i></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!--Quartos simples-->>
+
+
+        <section class="hotels">
+            <div class="container">
+                <h5 id="Quartos simples" class="section-head">
+                    <span class="heading">Quartos Simples</span>
+                </h5>
+                <div class="grid">
+                    <div class="grid-item featured-hotels">
+                        <img class="hotel-image" src="https://imagens-revista.vivadecora.com.br/uploads/2020/07/1.-A-cama-box-solteiro-com-ba%C3%BA-solteiro-auxilia-na-organiza%C3%A7%C3%A3o-do-c%C3%B4modo.-Fonte-Tetriz-Arquitetura.jpg" alt="">
+                        <h5 class="hotel-name">Quarto Solteiro</h5>
+                        <span class="hotel-price">A partir de $70/dia e noite</span>
+                        <div class="hotel-rating">
+                            <i class="fas fa-star rating"></i>
+                            <i class="fas fa-star rating"></i>
+                            <i class="fas fa-star rating"></i>
+                            <i class="fas fa-star rating"></i>
+                            <i class="fas fa-star-half rating"></i>
+                        </div>
+                        <a href="Cadastro-login.html" class="btn btn-gradient">
+                            Reserve agora
+                            <span class="dots"><i class="fas fa-ellipsis-h"></i></span>
+                        </a>
+                    </div>
+                    <div class="grid-item featured-hotels">
+                        <img class="hotel-image" src="https://www.hplus.com.br/wp-content/uploads/2019/08/quarto-superior-solteiro-hotel-cullinan-hplus-em-brasilia-4.jpg" alt="">
+                        <h5 class="hotel-name">Quarto Solteiro duplo</h5>
+                        <span class="hotel-price">A partir de $100/Dia e Noite</span>
+                        <div class="hotel-rating">
+                            <i class="fas fa-star rating"></i>
+                            <i class="fas fa-star rating"></i>
+                            <i class="fas fa-star rating"></i>
+                            <i class="fas fa-star rating"></i>
+                            <i class="fas fa-star rating"></i>
+                        </div>
+                        <a href="Cadastro-login.html" class="btn btn-gradient">
+                            Reserve agora
+                            <span class="dots"><i class="fas fa-ellipsis-h"></i></span>
+                        </a>
+                    </div>
+                    <div class="grid-item featured-hotels">
+                        <img class="hotel-image" src="http://static1.eskypartners.com/travelguide/image8.png" alt="">
+                        <h5 class="hotel-name">Quarto de Casal</h5>
+                        <span class="hotel-price">A partir de $100/Dia e noite</span>
+                        <div class="hotel-rating">
+                            <i class="fas fa-star rating"></i>
+                            <i class="fas fa-star rating"></i>
+                            <i class="fas fa-star rating"></i>
+                            <i class="fas fa-star rating"></i>
+                            <i class="fas fa-star-half rating"></i>
+                        </div>
+                        <a href="Cadastro-login.html" class="btn btn-gradient">
+                            Reserve agora
+                            <span class="dots"><i class="fas fa-ellipsis-h"></i></span>
+
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Hotels section end-->
+        <!--Special offer section start-->
+        <section class="offer">
+            <div class="container">
+                <div class="offer-content">
+                    <div class="discount">
+                        40% off
+                    </div>
+                    <h5 class="hotel-name">Vip</h5>
+                    <div class="hotel-rating">
+                        <i class="fas fa-star rating"></i>
+                        <i class="fas fa-star rating"></i>
+                        <i class="fas fa-star rating"></i>
+                        <i class="fas fa-star rating"></i>
+                        <i class="fas fa-star-half rating"></i>
+                    </div>
+                    <p class="paragraph">Garanta agora mesmo o melhor conforto por um preço justo e aproveite nossos brindes inclusos no pacote vip.</p>
+                    <a href="#Vipcasal" class="btn btn-gradient">
+                        Resgatar oferta
+                        <span class="dots"><i class="fas fa-ellipsis-h"></i></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!--Special offer section end-->
+        <!--Rooms section start-->
+        <!--Quartos vip-->
+
+        <section class="hotels">
+            <div class="container">
+                <h5 class="section-head">
+                    <span class="heading">Quartos Vip</span>
+                </h5>
+                <div class="grid">
+                    <div class="grid-item featured-hotels">
+                        <img class="hotel-image" src="https://casaeconstrucao.org/wp-content/uploads/2015/11/quartos-de-luxo-13.jpg" alt="">
+                        <h5 class="hotel-name">Quarto Solteiro</h5>
+                        <span class="hotel-price">A partir de $120/dia e noite</span>
+                        <div class="hotel-rating">
+                            <i class="fas fa-star rating"></i>
+                            <i class="fas fa-star rating"></i>
+                            <i class="fas fa-star rating"></i>
+                            <i class="fas fa-star rating"></i>
+                            <i class="fas fa-star-half rating"></i>
+                        </div>
+                        <a href="Cadastro-login.html" class="btn btn-gradient">
+                            Reserve agora
+                            <span class="dots"><i class="fas fa-ellipsis-h"></i></span>
+                        </a>
+                    </div>
+                    <div class="grid-item featured-hotels">
+                        <img class="hotel-image" src="https://i.pinimg.com/originals/30/5a/b4/305ab4bbfd94a0d6c020fb427f306905.jpg" alt="">
+                        <h5 class="hotel-name">Quarto Solteiro duplo</h5>
+                        <span class="hotel-price">A partir de $160/Dia e Noite</span>
+                        <div class="hotel-rating">
+                            <i class="fas fa-star rating"></i>
+                            <i class="fas fa-star rating"></i>
+                            <i class="fas fa-star rating"></i>
+                            <i class="fas fa-star rating"></i>
+                            <i class="fas fa-star rating"></i>
+                        </div>
+                        <a href="Cadastro-login.html" class="btn btn-gradient">
+                            Reserve agora
+                            <span class="dots"><i class="fas fa-ellipsis-h"></i></span>
+                        </a>
+                    </div>
+                    <div class="grid-item featured-hotels">
+                        <img id="Vipcasal" class="hotel-image" src="https://imagens-revista.vivadecora.com.br/uploads/2019/06/quarto-de-luxo-decoracao-quarto-de-casal-suite-master-iarakilaris-e1559754802539.jpg" alt="">
+                        <h5 class="hotel-name">Quarto de Casal</h5>
+                        <span class="hotel-price">A partir de $160/Dia e noite</span>
+                        <div class="hotel-rating">
+                            <i class="fas fa-star rating"></i>
+                            <i class="fas fa-star rating"></i>
+                            <i class="fas fa-star rating"></i>
+                            <i class="fas fa-star rating"></i>
+                            <i class="fas fa-star-half rating"></i>
+                        </div>
+                        <a href="Cadastro-login.html" class="btn btn-gradient">
+                            Reserve agora
+                            <span class="dots"><i class="fas fa-ellipsis-h"></i></span>
+
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Escritorio-->
+
+        <section class="hotels">
+            <div class="container">
+                <h5 class="section-head">
+                    <span class="heading">Escritorio</span>
+                </h5>
+                <div class="grid">
+                    <div class="grid-item featured-hotels">
+                        <img class="hotel-image" src="https://virtualbackgrounds.site/wp-content/uploads/2020/08/industrial-style-office.jpg" alt="">
+                        <h5 class="hotel-name">Escritorio</h5>
+                        <span class="hotel-price">A partir de $70/diario</span>
+                        <div class="hotel-rating">
+                            <i class="fas fa-star rating"></i>
+                            <i class="fas fa-star rating"></i>
+                            <i class="fas fa-star rating"></i>
+                            <i class="fas fa-star rating"></i>
+                            <i class="fas fa-star-half rating"></i>
+                        </div>
+                        <a href="Cadastro-login.html" class="btn btn-gradient">
+                            Reserve agora
+                            <span class="dots"><i class="fas fa-ellipsis-h"></i></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+        <!--Rooms section end-->
+        <!--Contact section start-->
+        <!--Contato para informaaçôes-->
+
+        <section class="contact">
+            <div class="container">
+                <h5 class="section-head">
+                    <span id="Contato" class="heading">Contato</span>
+
+                </h5>
+                <div class="contact-content">
+                    <div class="traveler-wrap">
+                        <img src="imagens/traveler.png " width="100%" height="100%" alt="contact">
+                    </div>
+                    <form action="" class="form contact-form">
+                        <div class="input-group-wrap">
+                            <div class="input-group">
+                                <input type="text" class="input" placeholder="Nome">
+                                <span class="bar"></span>
+                            </div>
+                            <div class="input-group">
+                                <input type="text" class="input" placeholder="E-mail">
+                                <span class="bar"></span>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <input type="text" class="input" placeholder="Assunto">
+                            <span class="bar"></span>
+                        </div>
+                        <div class="input-group">
+                            <textarea class="input" cols="30" rows="8" placeholder="Mensagem" required></textarea>
+                            <span class="bar"></span>
+                        </div>
+                        <button type="submit" class="btn form-btn btn-purple">
+                            Envia Mensagem
+                            <span class="dots"><i class="fas fa-ellipsis-h"></i></span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <h5 class="section-head">
+            <span id="Contato" class="heading">Onde estamos</span>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d469290.59207695525!2d-47.911018505799305!3d-23.230975458859053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8b945ca8e9fd9%3A0xdc78cb25c45a0082!2sUnihotel!5e0!3m2!1sen!2sbr!4v1632197060542!5m2!1sen!2sbr" width="100%" height="650" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <!--Contact section end-->
+    </main>
+    <!--Main end-->
+    <!--Footer section start-->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-content-brand">
+                    <a href="index.html" class="logo">
+                        <img src="imagens/logo2-removebg-preview.png" alt="" class="logo-image">
+                    </a>
+                    <p class="paragraph">
+                        No UniHotel você encontra conforto e qualidade por preços abaixo do mercado e possíveis de parcelar sem fazer nenhuma loucura, localizado em aérea de fácil acesso.
+                    </p>
+                    <p>
+                        &copy;2021 Todos os direitos são reservados a UniHotel
+                    </p>
+                </div>
+
+                <div class="social-media-wrap">
+                    <h4 class="footer-heading">SIGA-NOS</h4>
+                    <div class="social-media">
+                        <a class="sm-link" href="#"><i class="fab fa-twitter"></i></a>
+                        <a class="sm-link" href="#"><i class="fab fa-facebook-square"></i></a>
+                        <a class="sm-link" href="#"><i class="fab fa-instagram"></i></a>
+                        <a class="sm-link" href="#"><i class="fab fa-pinterest"></i></a>
+                        <a class="sm-link" href="#"><i class="fab fa-tripadvisor"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    <!--Footer section end-->
+    <script src="main.js"></script>
+</body>
+
+</html>
